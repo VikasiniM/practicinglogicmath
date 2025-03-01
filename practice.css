@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #7b7875, #edadad);
+}
+
+/* Calculator Container */
+.calculator {
+    width: 320px;
+    background: #2c3e50;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Display Area */
+.display {
+    width: 100%;
+    height: 100px;
+    background: #34495e;
+    color: #ecf0f1;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 20px;
+    border-bottom: 2px solid #2c3e50;
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Button Styling */
+.btn {
+    background: #34495e;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.btn:hover {
+    background: #4a6fa5;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Operator Buttons */
+.operator {
+    background: #747373;
+    color: #fff;
+}
+
+.operator:hover {
+    background: #d30000;
+}
+
+/* Zero Button */
+.zero {
+    grid-column: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
